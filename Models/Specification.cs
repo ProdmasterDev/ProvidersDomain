@@ -2,9 +2,6 @@
 
 namespace ProvidersDomain.Models
 {
-    /// <summary>
-    /// Specification
-    /// </summary>
     public class Specification : ITimeStampedModel
     {
         [Key]
@@ -23,9 +20,7 @@ namespace ProvidersDomain.Models
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
         public virtual List<ProductSpecification> ProductSpecifications { get; set; } = new();
-        /// <summary>
-        /// Verify state
-        /// </summary>
+
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]        
         public VerifyState VerifyState { get; set; } = VerifyState.NotSended;
