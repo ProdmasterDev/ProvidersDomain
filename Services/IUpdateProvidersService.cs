@@ -3,5 +3,7 @@
     public interface IUpdateProvidersService
     {
         Task LoadProvider(long customId, string? password);
+
+        Task LoadProviders();
     }
 }
