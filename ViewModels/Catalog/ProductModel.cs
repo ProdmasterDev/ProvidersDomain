@@ -25,6 +25,8 @@ namespace ProvidersDomain.ViewModels.Catalog
         [DisplayName("Производитель")]
         public long? ManufacturerId { get; set; }
         public long? SpecificationId { get; set; }
+        [DisplayName("Без производителя")]
+        public bool WithEmptyManufacturer {  get; set; }
         [DisplayName("Производитель")]
         public Manufacturer? Manufacturer { get; set; }
         public string? ManufacturerName { get; set; }

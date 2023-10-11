@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace ProvidersDomain.Models
@@ -31,7 +32,9 @@ namespace ProvidersDomain.Models
         public long StandartId { get; set; }
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public virtual Standart Standart { get; set; }        
+        public virtual Standart Standart { get; set; }
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
         [JsonProperty("manufact")]
         public long? ManufacturerId { get; set; }
         [Newtonsoft.Json.JsonIgnore]
@@ -52,5 +55,12 @@ namespace ProvidersDomain.Models
         public DateTime CreatedAt { get; set; }
         [JsonProperty("modify")]
         public DateTime LastModified { get; set; }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is Product product) return Id == product.Id;
+            return false;
+        }
+        public override int GetHashCode() => Id.GetHashCode();
     }
 }

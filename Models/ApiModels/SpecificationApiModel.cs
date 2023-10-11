@@ -8,6 +8,7 @@ namespace ProvidersDomain.Models.ApiModels
         public DateTime StartsAt { get; set; }
         public DateTime ExpiresAt { get; set; }
         public long UserId { get; set; }
+        public long? CustomId { get; set; }
         public string ProvidersName { get; set; }
         public string INN { get; set; }
         public string Email { get; set; }
