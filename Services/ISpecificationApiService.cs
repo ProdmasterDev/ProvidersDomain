@@ -8,6 +8,7 @@ namespace ProvidersDomain.Services
     {
         Task AddOrUpdateSpecifications(IEnumerable<UpdateSpecificationApiModel> specifications);
         Task<bool> SuccessSendingSpecifications(IEnumerable<long> specificationIds);
+        Task<bool> ConfirmSendingSpecifications(IEnumerable<ConfirmSpecificationApiModel> specifications);
         Task<IEnumerable<SpecificationApiModel>> GetNewSpecifications();
     }
 }
