@@ -51,6 +51,12 @@ namespace ProvidersDomain.Models
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
         public virtual List<ProductSpecification> ProductSpecifications { get; set; } = new ();
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public virtual List<Order>? Orders { get; set; } = new();
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public virtual List<OrderProductPart> OrderProductPart { get; set; } = new();
         [JsonProperty("create")]
         public DateTime CreatedAt { get; set; }
         [JsonProperty("modify")]
