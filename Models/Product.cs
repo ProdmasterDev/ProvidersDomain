@@ -53,7 +53,7 @@ namespace ProvidersDomain.Models
         public virtual List<ProductSpecification> ProductSpecifications { get; set; } = new ();
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public virtual List<Order> Orders { get; set; } = new();
+        public virtual List<Order>? Orders { get; set; } = new();
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
         public virtual List<OrderProductPart> OrderProductPart { get; set; } = new();

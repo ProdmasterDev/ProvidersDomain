@@ -19,6 +19,7 @@ namespace ProvidersDomain.Models
         public string Phone { get; set; }
         public virtual List<Product>? Products { get; set; }
         public virtual List<Specification>? Specifications { get; set; }
+        public virtual List<Order> Orders { get; set; } = new List<Order>();
         [Newtonsoft.Json.JsonProperty("create")]
         public DateTime CreatedAt { get; set; }
         [Newtonsoft.Json.JsonProperty("modify")]
