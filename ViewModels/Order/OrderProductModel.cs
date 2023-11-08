@@ -8,7 +8,9 @@ namespace ProvidersDomain.ViewModels.Order
         public long Id { get; set; }
         [DisplayName("Наименование")]
         public string? Name { get; set; } = string.Empty;
+        [Range(0, double.MaxValue,ErrorMessage ="Значение количества должно быть не меньше 0!")]
         [DisplayName("Количество")]
+        [DisplayFormat(DataFormatString = "{0:0.00}", ApplyFormatInEditMode = true)]
         public double? Quantity { get; set; } = 0;
         [DisplayName("Ед.изм.")]
         public string? UnitName { get; set; } = string.Empty;

@@ -10,9 +10,9 @@ namespace ProvidersDomain.ViewModels.Order
         public string UserName { get; set; }
         [DisplayName("Статус заказа")]
         public OrderState OrderState { get; set; }
-        [DisplayName("Причина отказа")]
+        [DisplayName("Причина")]
         public string? DeclineNote { get; set; } = string.Empty;
-        [DisplayName("Подтверждаете или отклоняете?")]
+        [DisplayName("Выберите действие")]
         public OrderState UserResponse { get; set; } = OrderState.New;
         [DisplayName("Дата поставки")]
         public DateTime Date { get; set; }
