@@ -13,6 +13,7 @@ namespace ProvidersDomain.Models
         DeclinedByProvider,
         ApprovedConfirmationByProvider,
         ApprovedDeclineByProvider,
-        DeclinedByRecipient
+        DeclinedByRecipient,
+        EditedByProvider,
     }
 }

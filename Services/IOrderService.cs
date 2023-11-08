@@ -15,6 +15,8 @@ namespace ProvidersDomain.Services
         Task<OrderModel?> GetOrderModel(User user, long id);
         Task ConfirmOrder(OrderModel orderModel);
         Task DeclineOrder(OrderModel orderModel);
+        Task EditOrder(OrderModel orderModel);
+        Task<OrderProductModel?> GetOriginalProductInOrder(OrderProductModel model, OrderModel order);
         Task<Order?> GetOrderByOrderModel(OrderModel model);
         Task<List<OrderApiModel>> GetConfirmedOrDeclinedOrders();
     }
