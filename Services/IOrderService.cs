@@ -19,6 +19,6 @@ namespace ProvidersDomain.Services
         Task<OrderProductModel?> GetOriginalProductInOrder(OrderProductModel model, OrderModel order);
         Task<Order?> GetOrderByOrderModel(OrderModel model);
         Task<List<OrderApiModel>> GetConfirmedOrDeclinedOrders();
-        Task<Order> GetOrderById(long id);
+        Task<Order?> GetOrderById(long id);
     }
 }
