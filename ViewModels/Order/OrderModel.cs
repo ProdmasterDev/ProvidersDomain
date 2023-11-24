@@ -12,6 +12,8 @@ namespace ProvidersDomain.ViewModels.Order
         public OrderState OrderState { get; set; }
         [DisplayName("Причина")]
         public string? DeclineNote { get; set; } = string.Empty;
+        [DisplayName("Номер заказа")]
+        public string? DocNumber { get; set; } = string.Empty;
         [DisplayName("Выберите действие")]
         public OrderState UserResponse { get; set; } = OrderState.New;
         [DisplayName("Дата поставки")]

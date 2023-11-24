@@ -9,6 +9,9 @@ namespace ProvidersDomain.ViewModels.Order
         [DisplayName("Наименование")]
         public string? Name { get; set; } = string.Empty;
         [Range(0, double.MaxValue,ErrorMessage ="Значение количества должно быть не меньше 0!")]
+        [DisplayName("Изначальное количество")]
+        [DisplayFormat(DataFormatString = "{0:0.00}", ApplyFormatInEditMode = true)]
+        public double? OriginalQuantity { get; set; } = 0;
         [DisplayName("Количество")]
         [DisplayFormat(DataFormatString = "{0:0.00}", ApplyFormatInEditMode = true)]
         public double? Quantity { get; set; } = 0;
