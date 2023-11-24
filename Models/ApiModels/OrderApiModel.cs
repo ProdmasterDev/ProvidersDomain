@@ -1,19 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProvidersDomain.Models.Base;
 
 namespace ProvidersDomain.Models.ApiModels
 {
-    public class OrderApiModel
+    public class OrderApiModel : OrderBase
     {
-        public long JrId { get; set; }
-        public long? JournalId { get; set; } = 0;
-        public long Object { get; set; }
-        public DateTime Date { get; set; }
-        public OrderState OrderState { get; set; } = OrderState.New;
-        public string DeclineNote {  get; set; } = string.Empty;
         public List<OrderProductApiModel>? ProductPart { get; set; } = new List<OrderProductApiModel>();
     }
 }
