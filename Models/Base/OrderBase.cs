@@ -5,9 +5,9 @@ namespace ProvidersDomain.Models.Base
 {
     public class OrderBase
     {
-        [JsonProperty("JrIdn")]
+        [JsonProperty("JrId")]
         public long JrId { get; set; }
-        [JsonProperty("journalidn")]
+        [JsonProperty("journalid")]
         public long? JournalId { get; set; }
         [JsonProperty("object")]
         [ForeignKey("object")]
